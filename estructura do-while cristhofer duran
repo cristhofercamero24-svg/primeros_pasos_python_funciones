@@ -1,0 +1,47 @@
+#******** zona de funciones***********
+def capturar_datos():
+    print("\nDigite la letra 'A' para Actualizar Sistema")
+    print("Digite la letra 'E' para Eliminar Catálogo")
+    print("Digite la letra 'C' para Crear Productos")
+    print("Digite la letra 'S' para salir del programa")
+    
+    letra = input("Ingrese una opción: ")
+    return letra.upper()     # Normalizamos a mayúscula
+
+def procesar_datos(letra):
+    if letra == 'A':
+        return "Opción A: Actualizando sistema..."
+    elif letra == 'E':
+        return "Opción E: Eliminando catálogo..."
+    elif letra == 'C':
+        return "Opción C: Creando productos..."
+    elif letra == 'S':
+        return "S"
+    else:
+        return "Opción no válida. Inténtelo de nuevo."
+
+def imprimir_datos(mensaje):
+    print("\nResultado:")
+    print(mensaje)
+    print("------------------------------")
+
+#****************codigo principal***********
+def main():
+    while True:  # Simula un DO-WHILE
+        opcion = capturar_datos()
+        mensaje = procesar_datos(opcion)
+        imprimir_datos(mensaje)
+
+        if opcion == "S":
+            print("Finalizó con éxito.\n")
+            break
+
+    print("EL DO-WHILE ha finalizado.\n")
+
+
+# Ejecutar el programa
+main()
+
+
+
+main()
